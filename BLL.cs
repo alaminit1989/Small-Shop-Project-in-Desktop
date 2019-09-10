@@ -21,7 +21,18 @@ namespace SCM
             catch { return new DataTable(); }
         }
 
+        public DataTable GetAllDropDownData(int intPart)
+        {
+            try
+            {
+                SprDataForAllDropDownListTableAdapter adp = new SprDataForAllDropDownListTableAdapter();
+                return adp.GetAllDropDownData(intPart);
+            }
+            catch { return new DataTable(); }
+        }
+
         #endregion ======================================================================================
+
 
 
 

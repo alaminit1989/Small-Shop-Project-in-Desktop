@@ -13,8 +13,7 @@ namespace SCM.UserControls
 {
     public partial class uProduct : UserControl
     {
-        DataTable dt;
-        BLL obj = new BLL();
+        DataTable dt; BLL obj = new BLL();
 
         public uProduct()
         {
