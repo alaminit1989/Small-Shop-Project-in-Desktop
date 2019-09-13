@@ -30,5 +30,11 @@ namespace SCM
             uProduct prod = new uProduct();
             AddControlsToPanel(prod);
         }
+
+        private void BtnCustomer_Click(object sender, EventArgs e)
+        {
+            uCustomer customer = new uCustomer();
+            AddControlsToPanel(customer);
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SCM.BLL
+namespace SCM.BusinessLogicLayer
 {
   public  class Customer
     {
