@@ -33,10 +33,19 @@
             this.btnStockOutput = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnStockInput = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.btnItemAdd = new System.Windows.Forms.Button();
+            this.dgvCustomer = new System.Windows.Forms.DataGridView();
+            this.intID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MobileNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreditBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OpennngBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTopMenuPurchase.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopMenuPurchase
@@ -45,8 +54,8 @@
             this.pnlTopMenuPurchase.Controls.Add(this.btnStockOutput);
             this.pnlTopMenuPurchase.Controls.Add(this.button4);
             this.pnlTopMenuPurchase.Controls.Add(this.btnStockInput);
-            this.pnlTopMenuPurchase.Controls.Add(this.button2);
-            this.pnlTopMenuPurchase.Controls.Add(this.button1);
+            this.pnlTopMenuPurchase.Controls.Add(this.btnDelete);
+            this.pnlTopMenuPurchase.Controls.Add(this.btnEdit);
             this.pnlTopMenuPurchase.Controls.Add(this.btnItemAdd);
             this.pnlTopMenuPurchase.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTopMenuPurchase.Location = new System.Drawing.Point(0, 0);
@@ -96,33 +105,35 @@
             this.btnStockInput.UseCompatibleTextRendering = true;
             this.btnStockInput.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(143, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(69, 30);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Delete";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(143, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(69, 30);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseCompatibleTextRendering = true;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // button1
+            // btnEdit
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(73, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 30);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Edit";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(73, 4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(69, 30);
+            this.btnEdit.TabIndex = 5;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEdit.UseCompatibleTextRendering = true;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnItemAdd
             // 
@@ -139,16 +150,80 @@
             this.btnItemAdd.UseVisualStyleBackColor = true;
             this.btnItemAdd.Click += new System.EventHandler(this.BtnItemAdd_Click);
             // 
+            // dgvCustomer
+            // 
+            this.dgvCustomer.AllowUserToAddRows = false;
+            this.dgvCustomer.AllowUserToOrderColumns = true;
+            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.intID,
+            this.strName,
+            this.MobileNo,
+            this.Address,
+            this.CreditBalance,
+            this.OpennngBalance,
+            this.Date});
+            this.dgvCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCustomer.Location = new System.Drawing.Point(0, 38);
+            this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.Size = new System.Drawing.Size(831, 273);
+            this.dgvCustomer.TabIndex = 7;
+            this.dgvCustomer.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvCustomer_CellMouseClick);
+            // 
+            // intID
+            // 
+            this.intID.DataPropertyName = "intID";
+            this.intID.HeaderText = "ID";
+            this.intID.Name = "intID";
+            // 
+            // strName
+            // 
+            this.strName.DataPropertyName = "strCustomer";
+            this.strName.HeaderText = "Name";
+            this.strName.Name = "strName";
+            // 
+            // MobileNo
+            // 
+            this.MobileNo.DataPropertyName = "strMobileNo";
+            this.MobileNo.HeaderText = "Mobile No";
+            this.MobileNo.Name = "MobileNo";
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "strAddress";
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            // 
+            // CreditBalance
+            // 
+            this.CreditBalance.DataPropertyName = "decCreditBlance";
+            this.CreditBalance.HeaderText = "Credit Balance";
+            this.CreditBalance.Name = "CreditBalance";
+            // 
+            // OpennngBalance
+            // 
+            this.OpennngBalance.DataPropertyName = "decOpeningBlance";
+            this.OpennngBalance.HeaderText = "Opennng Balance";
+            this.OpennngBalance.Name = "OpennngBalance";
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "dteActionTime";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            // 
             // uCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.dgvCustomer);
             this.Controls.Add(this.pnlTopMenuPurchase);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "uCustomer";
             this.Size = new System.Drawing.Size(831, 311);
             this.pnlTopMenuPurchase.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,8 +234,16 @@
         private System.Windows.Forms.Button btnStockOutput;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnStockInput;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnItemAdd;
+        private System.Windows.Forms.DataGridView dgvCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn intID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn strName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MobileNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CreditBalance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OpennngBalance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
     }
 }

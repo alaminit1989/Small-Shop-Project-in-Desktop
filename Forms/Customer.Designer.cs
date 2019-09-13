@@ -40,9 +40,10 @@
             this.lblOpening = new System.Windows.Forms.Label();
             this.txtOpening = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblHeader = new System.Windows.Forms.Label();
             this.btnCustomerCreate = new System.Windows.Forms.Button();
+            this.lblHeader = new System.Windows.Forms.Label();
             this.errorValidator = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorValidator)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +63,7 @@
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(129, 20);
             this.txtCustomerName.TabIndex = 1;
+            this.txtCustomerName.Text = " ";
             this.txtCustomerName.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCustomerName_Validating);
             // 
             // lblMobile
@@ -134,6 +136,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnCustomerCreate);
             this.panel1.Controls.Add(this.txtCustomerName);
             this.panel1.Controls.Add(this.txtOpening);
@@ -150,16 +153,6 @@
             this.panel1.Size = new System.Drawing.Size(373, 236);
             this.panel1.TabIndex = 2;
             // 
-            // lblHeader
-            // 
-            this.lblHeader.AutoSize = true;
-            this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(9, 9);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(145, 20);
-            this.lblHeader.TabIndex = 0;
-            this.lblHeader.Text = "Customer Create";
-            // 
             // btnCustomerCreate
             // 
             this.btnCustomerCreate.Location = new System.Drawing.Point(252, 199);
@@ -170,10 +163,31 @@
             this.btnCustomerCreate.UseVisualStyleBackColor = true;
             this.btnCustomerCreate.Click += new System.EventHandler(this.BtnCustomerCreate_Click);
             // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(9, 9);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(145, 20);
+            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Text = "Customer Create";
+            // 
             // errorValidator
             // 
             this.errorValidator.BlinkRate = 350;
             this.errorValidator.ContainerControl = this;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(147, 198);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(99, 34);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Visible = false;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // frmCustomer
             // 
@@ -208,5 +222,6 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Button btnCustomerCreate;
         private System.Windows.Forms.ErrorProvider errorValidator;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

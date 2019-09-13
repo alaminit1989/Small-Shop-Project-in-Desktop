@@ -8,7 +8,9 @@ namespace SCM.Helper
 {
    public class User
     {
-        public int Enroll { get; set; }
-        public int UnitId { get; set; }
+        public static int Enroll { get; set; }
+        public static int UnitId { get; set; }
+
+        public static int Id { get; set; }
     }
 }

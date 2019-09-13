@@ -80,6 +80,7 @@
     <Compile Include="Helper\Utility.cs" />
     <Compile Include="Helper\XmlParser.cs" />
     <Compile Include="MainControlClass.cs" />
+    <Compile Include="Model\Customers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\uCustomer.cs">
@@ -196,6 +197,9 @@
     <Content Include="Assets\Img\stock.png" />
     <Content Include="Assets\Img\supplier.png" />
     <Content Include="Assets\Img\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
