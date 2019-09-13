@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL.cs" />
+    <Compile Include="BLL\Customer.cs" />
+    <Compile Include="DAL\Customer_TDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer_TDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -100,6 +106,17 @@
     <EmbeddedResource Include="UserControls\uPurchase.resx">
       <DependentUpon>uPurchase.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DAL\Customer_TDS.xsc">
+      <DependentUpon>Customer_TDS.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\Customer_TDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Customer_TDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAL\Customer_TDS.xss">
+      <DependentUpon>Customer_TDS.xsd</DependentUpon>
+    </None>
     <None Include="DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </None>

@@ -21,7 +21,6 @@ namespace SCM.BLL
         {
             return new DataTable();
 
-
         }
     }
 }
