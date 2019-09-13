@@ -17,9 +17,17 @@ namespace SCM.Forms
        
         private void BtnCustomerCreate_Click(object sender, EventArgs e)
         {
-            if (ValidateChildren())
+            DialogResult dialogResult = MessageBox.Show("Do you want proceed ?", "Confirmation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes && ValidateChildren())
             {
-                MessageBox.Show(" is valid data");
+                try
+                {
+                    MessageBox.Show(" is valid data");
+                }
+                catch { }
+
+
+               
             }
             else
             {

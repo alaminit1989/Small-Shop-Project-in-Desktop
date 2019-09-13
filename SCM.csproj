@@ -76,7 +76,9 @@
     <Compile Include="Forms\Product.Designer.cs">
       <DependentUpon>Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\User.cs" />
     <Compile Include="Helper\Utility.cs" />
+    <Compile Include="Helper\XmlParser.cs" />
     <Compile Include="MainControlClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -160,7 +162,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Helper\Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Img\accounts.png" />
     <Content Include="Assets\Img\add.png" />

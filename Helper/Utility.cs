@@ -9,8 +9,10 @@ using System.Windows.Forms;
 
 namespace SCM.Helper
 {
-  public   class Utility
+  public   class Utility: User
     {
+       public static string _filePathForXml = "";
+   
         public static bool ValidateString(TextBox validator, ErrorProvider errorValidator, Label name, CancelEventArgs e)
         {
             string a = errorValidator.Container.Components.Count.ToString();
@@ -58,9 +60,6 @@ namespace SCM.Helper
             return true;
 
         }
-
-
-
         public static bool ValidateNumber(TextBox validator, ErrorProvider errorValidator, Label name, CancelEventArgs e)
         {
             decimal result;
@@ -79,5 +78,15 @@ namespace SCM.Helper
             }
 
         }
+
+
+        public string GetXmlFilePath()
+        {
+            string unit = "";
+            _filePathForXml = (@"~/Data/Sales__" + Enroll + ".xml");//server.MapPath("~/Data/Sales__" + Enroll + ".xml");
+            return _filePathForXml;
+        }
+
+
     }
 }
