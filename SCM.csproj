@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL.cs" />
-    <Compile Include="BusinessLogicLayer\Customer.cs" />
+    <Compile Include="BusinessLogicLayer\Customer_BLL.cs" />
     <Compile Include="DAL\Customer_TDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

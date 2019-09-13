@@ -10,20 +10,24 @@ using System.Windows.Forms;
 using SCM.Forms;
 using SCM.BusinessLogicLayer;
 using SCM.Helper;
+using SCM.Model;
 
 namespace SCM.UserControls
 {
     public partial class uCustomer : UserControl
     {
         DataTable dt = new DataTable();
-        Customer objCustomer = new Customer();
+        Customer_BLL objCustomer = new Customer_BLL();
+        Customers cust = new Customers();
+        string msg = "";
         public uCustomer()
         {
             InitializeComponent();
            
-                string msg = "";
+             
             dgvCustomer.AutoGenerateColumns = false;
-            dt =  objCustomer.CustomerCRUD(4, 0, "",0,"","",0,0,0,ref msg); 
+            cust.intPart = 4;
+            dt =  objCustomer.CustomerCRUD(cust, ref msg); 
             dgvCustomer.DataSource = dt;
             dgvCustomer.ColumnHeadersDefaultCellStyle.BackColor = Color.Silver;
             dgvCustomer.EnableHeadersVisualStyles = false;

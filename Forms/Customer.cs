@@ -1,5 +1,6 @@
 ﻿using SCM.BusinessLogicLayer;
 using SCM.Helper;
+using SCM.Model;
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -9,8 +10,10 @@ namespace SCM.Forms
 {
     public partial class frmCustomer : Form
     {
-        Customer objCustomer = new Customer();
+        Customer_BLL objCustomer = new Customer_BLL();
+        Customers cust = new Customers();
         DataTable dt = new DataTable();
+        string msg = "";
         public frmCustomer()
         {
             InitializeComponent();
@@ -21,9 +24,10 @@ namespace SCM.Forms
                 lblHeader.Text = "Customer Edit";
                 try
                 {
-                    string msg = "";
-
-                   dt= objCustomer.CustomerCRUD(5, User.Id, txtCustomerName.Text, 1, txtMobile.Text, txtAddress.Text, 0, 0, 0, ref msg);
+                    
+                    cust.intPart = 5;
+                    cust.intId = User.Id;
+                    dt= objCustomer.CustomerCRUD(cust, ref msg);
                     if (dt.Rows.Count > 0)
                     {
                         txtCustomerName.Text = dt.Rows[0]["strCustomer"].ToString();
@@ -45,9 +49,15 @@ namespace SCM.Forms
             {
                 try
                 {
-                    string msg = "";
-                  
-                    objCustomer.CustomerCRUD(1, 0, txtCustomerName.Text, 1, txtMobile.Text, txtAddress.Text,Convert.ToDecimal(txtCredit.Text), Convert.ToDecimal(txtOpening.Text), 0, ref msg);
+                   
+                    cust.intPart = 1; 
+                    cust.intUnitID = 2;
+                    cust.strCustomer = txtCustomerName.Text;
+                    cust.strMobileNo = txtMobile.Text;
+                    cust.strAddress = txtAddress.Text;
+                    cust.decCreditBlance = Convert.ToDecimal(txtCredit.Text);
+                    cust.decOpeningBlance = Convert.ToDecimal(txtOpening.Text);
+                    objCustomer.CustomerCRUD(cust, ref msg);
                     MessageBox.Show(msg);
                 }
                 catch { }
@@ -103,9 +113,16 @@ namespace SCM.Forms
             {
                 try
                 {
-                    string msg = "";
-
-                    objCustomer.CustomerCRUD(2,User.Id, txtCustomerName.Text, 1, txtMobile.Text, txtAddress.Text, Convert.ToDecimal(txtCredit.Text), Convert.ToDecimal(txtOpening.Text), 0, ref msg);
+                   
+                    cust.intPart = 2;
+                    cust.intId = User.Id;
+                    cust.intUnitID = 2;
+                    cust.strCustomer = txtCustomerName.Text;
+                    cust.strMobileNo = txtMobile.Text;
+                    cust.strAddress = txtAddress.Text;
+                    cust.decCreditBlance = Convert.ToDecimal(txtCredit.Text);
+                    cust.decOpeningBlance = Convert.ToDecimal(txtOpening.Text); 
+                    objCustomer.GetCustomer(cust, ref msg);
                     MessageBox.Show(msg);
                 }
                 catch { }
