@@ -67,7 +67,7 @@ namespace SCM.Helper
             if (!decimal.TryParse(validator.Text, out result))
             {
                 errorValidator.SetError(validator, name.Text + " is required only Number.");
-                e.Cancel = true;
+               e.Cancel = true;
                 return false;
 
             }

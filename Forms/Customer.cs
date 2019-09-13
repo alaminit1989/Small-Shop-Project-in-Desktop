@@ -61,6 +61,10 @@ namespace SCM.Forms
             Utility.ValidateNumber(txtOpening, errorValidator, lblOpening, e);
            
         }
-        
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
