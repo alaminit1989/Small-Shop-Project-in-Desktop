@@ -48,8 +48,7 @@ namespace SCM.UserControls
         private void GetCustomerList()
         {
             dgvCustomer.AutoGenerateColumns = false;
-            cust.intPart = 4;
-            dt = objCustomer.CustomerCRUD(cust, ref msg);
+            dt=objCustomer.GetCustomerAll(0);
             dgvCustomer.DataSource = dt;
             dgvCustomer.ColumnHeadersDefaultCellStyle.BackColor = Color.Silver;
             dgvCustomer.EnableHeadersVisualStyles = false;
