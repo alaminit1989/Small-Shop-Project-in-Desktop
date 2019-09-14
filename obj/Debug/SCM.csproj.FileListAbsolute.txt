@@ -36,4 +36,22 @@ E:\DesktopApp2019\SCM\Small-Shop-Project-in-Desktop\obj\Debug\SCM.csproj.Generat
 E:\DesktopApp2019\SCM\Small-Shop-Project-in-Desktop\obj\Debug\SCM.csproj.CoreCompileInputs.cache
 E:\DesktopApp2019\SCM\Small-Shop-Project-in-Desktop\obj\Debug\SCM.exe
 E:\DesktopApp2019\SCM\Small-Shop-Project-in-Desktop\obj\Debug\SCM.pdb
+<<<<<<< HEAD
 E:\DesktopApp2019\SCM\Small-Shop-Project-in-Desktop\obj\Debug\SCM.csprojAssemblyReference.cache
+=======
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.Forms.frmCustomer.resources
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.Home.resources
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.Forms.frmProduct.resources
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.Properties.Resources.resources
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.UserControls.uCustomer.resources
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.UserControls.uProduct.resources
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.UserControls.uPurchase.resources
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.csproj.GenerateResource.cache
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.csproj.CoreCompileInputs.cache
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.exe
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.pdb
+E:\Real Project\Small-Shop-Project-in-Desktop\bin\Debug\SCM.exe.config
+E:\Real Project\Small-Shop-Project-in-Desktop\bin\Debug\SCM.exe
+E:\Real Project\Small-Shop-Project-in-Desktop\bin\Debug\SCM.pdb
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.csprojAssemblyReference.cache
+>>>>>>> 29116f961b8273d15ffbb77a8df33d4f404a8173
