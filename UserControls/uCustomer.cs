@@ -41,6 +41,7 @@ namespace SCM.UserControls
             
             this.Refresh();
             GetCustomerList();
+            User.Id = 0;
             
         }
 
