@@ -22,20 +22,31 @@ namespace SCM.BusinessLogicLayer
             catch (Exception ex){ return  new  DataTable(); }
             
         }
-        public DataTable GetCustomer(Customers cust,ref string msg)
+        public DataTable GetCustomer(int custid)
         {
             try
             {
-                SprCustomerCreateTableAdapter adp = new SprCustomerCreateTableAdapter();
-                return adp.GetCustomerData(cust.intPart, cust.intId, cust.strCustomer, cust.intUnitID, cust.strMobileNo, cust.strAddress, cust.decCreditBlance, cust.decOpeningBlance, cust.intActionBy, ref msg);
-               
+                string msg = "";
+                Customers cust = new Customers();
+                cust.intPart = 5;
+                cust.intId = custid;
+                return CustomerCRUD(cust, ref  msg);
+
 
             }
             catch (Exception ex) { return new DataTable(); }
         }
-        public DataTable  GetCustomerAll(int intUnitId)
+        public  DataTable  GetCustomerAll(int intUnitId)
         {
-            return new DataTable();
+            try
+            {
+                string msg = "";
+                Customers cust = new Customers();
+                cust.intPart = 4;
+                return CustomerCRUD(cust, ref msg);
+
+            }
+            catch (Exception ex) { return new DataTable(); }
 
         }
     }

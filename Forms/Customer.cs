@@ -127,7 +127,7 @@ namespace SCM.Forms
                     cust.strAddress = txtAddress.Text;
                     cust.decCreditBlance = Convert.ToDecimal(txtCredit.Text);
                     cust.decOpeningBlance = Convert.ToDecimal(txtOpening.Text);
-                    objCustomer.GetCustomer(cust, ref msg);
+                    objCustomer.CustomerCRUD(cust, ref msg);
                     MessageBox.Show(msg);
                 }
                 catch { }
