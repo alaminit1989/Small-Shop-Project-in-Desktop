@@ -36,3 +36,4 @@ E:\DesktopApp2019\SCM\Small-Shop-Project-in-Desktop\obj\Debug\SCM.csproj.Generat
 E:\DesktopApp2019\SCM\Small-Shop-Project-in-Desktop\obj\Debug\SCM.csproj.CoreCompileInputs.cache
 E:\DesktopApp2019\SCM\Small-Shop-Project-in-Desktop\obj\Debug\SCM.exe
 E:\DesktopApp2019\SCM\Small-Shop-Project-in-Desktop\obj\Debug\SCM.pdb
+E:\DesktopApp2019\SCM\Small-Shop-Project-in-Desktop\obj\Debug\SCM.csprojAssemblyReference.cache
