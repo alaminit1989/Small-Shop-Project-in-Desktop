@@ -66,6 +66,7 @@ namespace SCM.Forms
             DialogResult dialogResult = MessageBox.Show("Do you want proceed ?", "Confirmation", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                
                 try
                 {
                     if (txtItemCode.Text != "") { strItemCode = txtItemCode.Text; }
