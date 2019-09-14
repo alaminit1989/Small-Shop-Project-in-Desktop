@@ -43,7 +43,6 @@
             this.btnCustomerCreate = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
             this.errorValidator = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnEdit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorValidator)).BeginInit();
             this.SuspendLayout();
@@ -136,7 +135,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnCustomerCreate);
             this.panel1.Controls.Add(this.txtCustomerName);
             this.panel1.Controls.Add(this.txtOpening);
@@ -178,17 +176,6 @@
             this.errorValidator.BlinkRate = 350;
             this.errorValidator.ContainerControl = this;
             // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(147, 198);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(99, 34);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Visible = false;
-            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
-            // 
             // frmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,6 +209,5 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Button btnCustomerCreate;
         private System.Windows.Forms.ErrorProvider errorValidator;
-        private System.Windows.Forms.Button btnEdit;
     }
 }

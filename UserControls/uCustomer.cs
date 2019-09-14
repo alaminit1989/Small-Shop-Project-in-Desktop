@@ -23,35 +23,35 @@ namespace SCM.UserControls
         public uCustomer()
         {
             InitializeComponent();
-           
-             
-            dgvCustomer.AutoGenerateColumns = false;
-            cust.intPart = 4;
-            dt =  objCustomer.CustomerCRUD(cust, ref msg); 
-            dgvCustomer.DataSource = dt;
-            dgvCustomer.ColumnHeadersDefaultCellStyle.BackColor = Color.Silver;
-            dgvCustomer.EnableHeadersVisualStyles = false;
+
+
+            GetCustomerList();
 
         }
 
-       
+     
         private void BtnItemAdd_Click(object sender, EventArgs e)
         {
-            frmCustomer child = new frmCustomer();
+            frmCustomer child = new frmCustomer(btnItemAdd.Text);
             child.FormClosed += new FormClosedEventHandler(Child_FormClosed);
             child.Show();
         }
         void Child_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //when child form is closed, this code is executed
+            
             this.Refresh();
             GetCustomerList();
-            //this.textBox1.Text = "Alamin";
+            
         }
 
         private void GetCustomerList()
         {
-            
+            dgvCustomer.AutoGenerateColumns = false;
+            cust.intPart = 4;
+            dt = objCustomer.CustomerCRUD(cust, ref msg);
+            dgvCustomer.DataSource = dt;
+            dgvCustomer.ColumnHeadersDefaultCellStyle.BackColor = Color.Silver;
+            dgvCustomer.EnableHeadersVisualStyles = false;
         }
 
         private void DgvCustomer_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -68,7 +68,7 @@ namespace SCM.UserControls
         {
             if (User.Id>0)
             {
-                frmCustomer child = new frmCustomer();
+                frmCustomer child = new frmCustomer(btnEdit.Text);
                 child.FormClosed += new FormClosedEventHandler(Child_FormClosed);
                 child.Show();
             }
@@ -87,6 +87,9 @@ namespace SCM.UserControls
                 DialogResult dialogResult = MessageBox.Show("Do you want proceed ?", "Confirmation", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes && ValidateChildren())
                 {
+                    frmCustomer child = new frmCustomer(btnDelete.Text);
+                    child.FormClosed += new FormClosedEventHandler(Child_FormClosed);
+                    child.Show();
 
 
                 }

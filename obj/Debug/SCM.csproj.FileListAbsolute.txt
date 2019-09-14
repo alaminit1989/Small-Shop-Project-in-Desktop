@@ -50,3 +50,4 @@ E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.pdb
 E:\Real Project\Small-Shop-Project-in-Desktop\bin\Debug\SCM.exe.config
 E:\Real Project\Small-Shop-Project-in-Desktop\bin\Debug\SCM.exe
 E:\Real Project\Small-Shop-Project-in-Desktop\bin\Debug\SCM.pdb
+E:\Real Project\Small-Shop-Project-in-Desktop\obj\Debug\SCM.csprojAssemblyReference.cache
